@@ -1,0 +1,147 @@
+$primary: #fff;
+$blue: dodgerblue;
+$tomato: tomato;
+$font: #000;
+
+* {
+    margin: 0;
+    padding: 0;
+    // user-select: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $font;
+
+    .wrapper {
+        margin: auto 0;
+        max-width: 350px;
+        background-color: $primary;
+        box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 15px;
+
+        h2 {
+            padding: 3px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .title {
+            margin: 8px 0;
+            padding: 0 10px;
+            display: block;
+            font-weight: 500;
+            text-align: center;
+        }
+
+
+
+        input[type=number] {
+            padding: 8px;
+            margin-top: 15px;
+            background-color: darken($primary, 5%);
+            border: 0;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            color: var(--font);
+            outline: none;
+        }
+
+
+        #submitBtn {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background-color: $blue;
+            border: 0;
+            border-radius: 3px;
+            display: block;
+            color: $primary;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($blue, 10%);
+            }
+
+            &:disabled {
+                background-color: darken($blue, 15%);
+                color: lighten($blue, 5%);
+                cursor: not-allowed;
+            }
+        }
+
+        #msg {
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .attemptime {
+            margin-top: 10px;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .hintBox {
+            margin-top: 15px;
+            padding: 8px;
+            max-width: 350px;
+            background-color: darken($primary, 5%);
+            border-radius: 5px;
+
+            .hintGenerateBtnWrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                #hintGenerateBtn {
+                    padding: 5px 8px;
+                    background-color: $blue;
+                    border: 0;
+                    border-radius: 3px;
+                    display: block;
+                    color: $primary;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: darken($blue, 10%);
+                    }
+                }
+            }
+
+            #hintInfo {
+                text-align: justify;
+            }
+        }
+
+        #rstBtn {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background-color: $tomato;
+            border: 0;
+            border-radius: 3px;
+            display: block;
+            color: $primary;
+            cursor: pointer;
+        }
+
+        .inactive {
+            display: none !important;
+        }
+    }
+
+
+}

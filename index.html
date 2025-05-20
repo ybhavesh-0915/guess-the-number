@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Guess the Number!</h2>
+        <span class="title">I'm thinking of a number between 1 and 100. Can you guess it?</span>
+        <input type="number" id="numberInput" min="1" max="100" placeholder="Enter the number">
+        <div class="btnWrapper">
+            <button type="button" id="submitBtn" onclick="checkGuess()">Submit</button>
+        </div>
+        <p id="msg"></p>
+        <div class="attemptime">
+            <div id="attempts">Attempts lefts: 60</div>
+            <div>Time left: <span id="timeLeft">60s</span></div>
+        </div>
+        <div class="hintBox">
+            <div class="hintGenerateBtnWrapper">Hint Box <button type="button" id="hintGenerateBtn">Generate Hints</button></div>
+            <div id="hintInfo"></div>
+        </div>
+        <button type="button" id="rstBtn" class="inactive" onclick="resetGame()">Reset</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
